@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Калькулятор дальности</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>Калькулятор дальности радиосвязи (Сайт)</h1>
+
+  <label>Частота (МГц): <input type="number" id="freq" value="868"></label>
+  <label>Мощность передатчика (дБм): <input type="number" id="p_tx" value="20"></label>
+  <label>Усиление антенны передатчика (дБ): <input type="number" id="g_tx" value="5"></label>
+  <label>Усиление антенны приёмника (дБ): <input type="number" id="g_rx" value="5"></label>
+  <label>Чувствительность приёмника (дБм): <input type="number" id="sensitivity" value="-100"></label>
+  <label>Высота передатчика (м): <input type="number" id="h_tx" value="10"></label>
+  <label>Высота приёмника (м): <input type="number" id="h_rx" value="2"></label>
+
+  <label>Тип местности:
+    <select id="terrain">
+      <option value="urban">Город</option>
+      <option value="suburban">Пригород</option>
+      <option value="rural">Сельская</option>
+    </select>
+  </label>
+
+  <button onclick="calculate()">Рассчитать</button>
+
+  <div class="result" id="result"></div>
+
+  <canvas id="chart" width="500" height="150"></canvas>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+
+
